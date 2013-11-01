@@ -30,10 +30,6 @@ $.ajaxSettings.xhr = function () {
  */
 
 	var prefixes = {
-		'dbpedia-owl': 'http://dbpedia.org/ontology/',
-		'dbpedia': 'http://.org/resource/',
-		'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
-		'foaf': 'http://xmlns.com/foaf/0.1/',
 		'o': 'http://geoknow.eu/wp5/ontology#'
 	};
 
@@ -50,20 +46,41 @@ $.ajaxSettings.xhr = function () {
 			street: '?st'
 		}],
 		from: '?s o:country ?co ; o:city ?ci ; o:zipcode ?zi ; o:street ?st .'
+		//from: '{ Select * { ?s o:country ?co ; o:city ?ci ; o:zipcode ?zi ; o:street ?st . } Limit 3 }'
 	});
 
-        store.addresses.find().asList().done(function(items) {
-//		_.map(items, function(item) {
-			var queryString = 'Augustusplatz 10 Leipzig 04109 Deutschland';
-			var req = doLookup(queryString);
-			req.done(function(x) {
-				console.log(JSON.stringify('Response for ' + queryString + ': ' + JSON.stringify(x)));
-			}).fail(function(err) {
-				console.log('Fail: ' + JSON.stringify(err));
-			});
-//		});
+	var countryMap = {
+		"A" : "Austria", //"Österreich",
+		"B" : "Belgium",
+		"CN" : "China",
+                "D" : "Germany", //"Deutschland",
+		"E" : "England",
+		"H" : "Hungaria", //"Hungaria",
+		"IN" : "India",
+		"KOR" : "Korea",
+		"NL" : "Netherlands", //"Nederland",
+		"PL" : "Poland", //"Polska",
+		"SK" : "Slovakia", //"Slovakei",
+		"SLO" : "Slovenia" //"Slovenija"
+	};
 
-		//console.log(JSON.stringify(items));
+        store.addresses.find().asList().done(function(items) {
+		_(items).each(function(item) {
+			var v = countryMap[item.country];
+			item.country = v ? v : item.country;
+		});
+
+
+		_.map(items, function(item) {
+			var queryString = item.street + ' ' + item.city + ' ' + item.zip + ' ' + item.country;
+
+			var req = doLookup(queryString);
+			req.done(function(data) {
+				console.log(item.id + '\t' + queryString + '\tsuccess\t' + JSON.stringify(data));
+			}).fail(function(err) {
+				console.log(item.id + '\t' + queryString + '\tfail\t' + JSON.stringify(err));
+			});
+		});
 	});
 
 
@@ -72,7 +89,7 @@ $.ajaxSettings.xhr = function () {
 		// http://nominatim.openstreetmap.org/search
 		var uri = service + "?format=json&q=" + encodeURIComponent(queryString);
 
-		console.log('Requesting: ', uri);
+		//console.log('Requesting: ', uri);
 
 		var result = $.ajax({url: uri, dataType: 'json'});
 		return result;
