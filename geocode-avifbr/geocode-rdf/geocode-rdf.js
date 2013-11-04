@@ -64,6 +64,20 @@ $.ajaxSettings.xhr = function () {
 		"SLO" : "Slovenia" //"Slovenija"
 	};
 
+	var filterEmpty = function(items) {
+		var result  = _(items).filter(function(item) {
+			return item && item.length > 0;
+		});
+		return result;
+	};
+
+	var joinNotEmpty = function(separator, items) {
+		var strs = filterEmpty(items);
+
+		var result = strs.join(separator);
+		return result;
+	};
+
         store.addresses.find().asList().done(function(items) {
 		_(items).each(function(item) {
 			var v = countryMap[item.country];
@@ -71,8 +85,21 @@ $.ajaxSettings.xhr = function () {
 		});
 
 
-		_.map(items, function(item) {
-			var queryString = item.street + ' ' + item.city + ' ' + item.zip + ' ' + item.country;
+		var objs = _(items)
+			.map(function(item) {
+				var queryString = joinNotEmpty(", ", [item.street, item.city, item.country]);
+				var obj ={item: item, queryString: queryString};
+				return obj;
+			})
+			.uniq(false, function(obj) { return obj.queryString; })
+			.sort(function(obj) { return obj.queryString;})
+			;
+
+		objs.map(function(obj) {
+			var item = obj.item;
+			var queryString = obj.queryString;
+
+			//console.log(queryString + " "  + JSON.stringify(item)); return;
 
 			var req = doLookup(queryString);
 			req.done(function(data) {
