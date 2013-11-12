@@ -71,12 +71,6 @@ $.ajaxSettings.xhr = function () {
 		return result;
 	};
 
-	var joinNotEmpty = function(separator, items) {
-		var strs = filterEmpty(items);
-
-		var result = strs.join(separator);
-		return result;
-	};
 
         store.addresses.find().asList().done(function(items) {
 		_(items).each(function(item) {
@@ -87,7 +81,7 @@ $.ajaxSettings.xhr = function () {
 
 		var objs = _(items)
 			.map(function(item) {
-				var queryString = joinNotEmpty(", ", [item.street, item.city, item.country]);
+				var queryString = filterEmpty([item.street, item.city, item.country]).join(", ");
 				var obj ={item: item, queryString: queryString};
 				return obj;
 			})
