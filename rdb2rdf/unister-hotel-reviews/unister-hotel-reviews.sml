@@ -35,12 +35,14 @@ Prefix gr: <http://purl.org/goodrelations/v1#>
 Prefix acco: <http://purl.org/acco/ns#>
 Prefix vcard: <http://www.w3.org/2006/vcard/ns#>
 
+Prefix foaf: <http://xmlns.com/foaf/0.1/>
+
 Prefix rev: <http://purl.org/stuff/rev#>
 
-Prefix r: <http://example.org/resource/>
-Prefix o: <http://example.org/ontology/>
+Prefix r: <http://ld.geoknow.eu/hotel-reviews/resource/>
+Prefix o: <http://ld.geoknow.eu/hotel-reviews/ontology/>
 
-#Prefix starRating: <http://purl.org/acco/ns/starRating#>>
+//Prefix starRating: <http://purl.org/acco/ns/starRating#>>
 
 Create View hotels As
   Construct {
@@ -107,6 +109,7 @@ Create View reviews As
 
     ?p
       a foaf:Person ;
+      rdfs:label ?pn ;
       foaf:name ?pn ;
       foaf:age ?pa ;
       o:childrenCount ?pcc ;
