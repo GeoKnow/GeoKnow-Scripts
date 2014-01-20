@@ -65,6 +65,7 @@ CREATE VIEW "airport_codes"("airportCode") AS SELECT "airportFrom" FROM "geoknow
 -- CREATE INDEX "idx_geoknow_flights_labels" ON "geoknow_flights"(CONCAT('Flight from ' + ));
 */
 
+/*
 Create View aiport_codes As
   Construct {
     ?s
@@ -76,7 +77,9 @@ Create View aiport_codes As
     ?iata = plainLiteral(?airportCode)
   From
     airport_codes
-/*
+*/
+
+
 Create View geoknow_flights As
   Construct {
     ?s
@@ -112,5 +115,5 @@ Create View geoknow_flights As
   From
     geoknow_flights
     //[[SELECT * FROM "geoknow_flights" LIMIT 10]]
-*/
+
 

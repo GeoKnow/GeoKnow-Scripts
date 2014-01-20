@@ -51,7 +51,7 @@ Create View hotels As
       o:id ?id ;
       rdfs:label ?l ;
       acco:feature ?sf ;
-      geo:lon ?lon ;
+      geo:long ?lon ;
       geo:lat ?lat ;
       vcard:hasAddress ?a ;
       .
@@ -81,8 +81,8 @@ Create View hotels As
     ?l = plainLiteral(?name)
     ?sf = uri(r:, 'hotel-rating', ?id)
     ?sr = typedLiteral(?stars, xsd:int)
-    ?lon = typedLiteral(?lon, xsd:double)
-    ?lat = typedLiteral(?lat, xsd:double)
+    ?lon = typedLiteral(?lon, xsd:decimal)
+    ?lat = typedLiteral(?lat, xsd:decimal)
     ?a = uri(r:, 'hotel-address', ?id)
     ?sa = plainLiteral(?street)
     ?zip = plainLiteral(?zip)

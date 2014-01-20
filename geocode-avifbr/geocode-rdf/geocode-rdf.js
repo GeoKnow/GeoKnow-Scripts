@@ -45,8 +45,8 @@ $.ajaxSettings.xhr = function () {
 			zip: '?zi',
 			street: '?st'
 		}],
-		from: '?s o:country ?co ; o:city ?ci ; o:zipcode ?zi ; o:street ?st .'
-		//from: '{ Select * { ?s o:country ?co ; o:city ?ci ; o:zipcode ?zi ; o:street ?st . } Limit 3 }'
+//		from: '?s o:country ?co ; o:city ?ci ; o:zipcode ?zi ; o:street ?st .'
+		from: '{ Select * { ?s o:country ?co ; o:city ?ci ; o:zipcode ?zi ; o:street ?st . } Limit 3 }'
 	});
 
 	var countryMap = {
@@ -55,7 +55,7 @@ $.ajaxSettings.xhr = function () {
 		"CN" : "China",
                 "D" : "Germany", //"Deutschland",
 		"E" : "England",
-		"H" : "Hungaria", //"Hungaria",
+		"H" : "Hungary", //"Hungaria",
 		"IN" : "India",
 		"KOR" : "Korea",
 		"NL" : "Netherlands", //"Nederland",
