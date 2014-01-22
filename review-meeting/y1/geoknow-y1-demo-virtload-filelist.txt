@@ -1,0 +1,17 @@
+
+#Sparqlify
+http://data.geoknow.eu/internal/demo/sparqlify/2014-01-21-unister-hotel-reviews.sparqlify.sorted.nt.bz2	http://demo.geoknow.eu/y1/sparqlify/hotel-reviews/
+
+http://data.geoknow.eu/internal/demo/sparqlify/2014-01-16-unister-flights-airport-codes.sparqlify.sorted.nt.bz2	http://demo.geoknow.eu/y1/sparqlify/flights/
+
+#GeoLift
+http://data.geoknow.eu/internal/demo/geolift/FlightEnrichment/flightEnriched.ttl	http://demo.geoknow.eu/y1/geolift/flights/
+
+#Limes
+http://data.geoknow.eu/internal/demo/limes/UniHReviews_WikiAthGeoHPolResults.ttl	http://demo.geoknow.eu/y1/limes/unister-wikimapia-hotels/
+
+#TripleGeo
+http://data.geoknow.eu/internal/demo/triplegeo/points_postgis_wiki_athens_GeoSPARQL_polygons.nt	http://demo.geoknow.eu/y1/triplegeo/wikimapia-athens/
+
+#Auxiliary
+http://data.geoknow.eu/public/geodatagovgr/RDF/blueflags/points_postgis_geodatagovgr_athens_GeoSPARQL_blueflags_points.nt	http://demo.geoknow.eu/y1/triplegeo/geodatagovgr-blueflags/
