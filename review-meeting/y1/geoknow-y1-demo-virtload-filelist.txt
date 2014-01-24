@@ -1,8 +1,9 @@
-
 #Sparqlify
 http://data.geoknow.eu/internal/demo/sparqlify/2014-01-21-unister-hotel-reviews.sparqlify.sorted.nt.bz2	http://demo.geoknow.eu/y1/sparqlify/hotel-reviews/
 
 http://data.geoknow.eu/internal/demo/sparqlify/2014-01-16-unister-flights-airport-codes.sparqlify.sorted.nt.bz2	http://demo.geoknow.eu/y1/sparqlify/flights/
+
+http://data.geoknow.eu/internal/unister/provided-files/hotel_prices.nt.gz http://demo.geoknow.eu/y1/sparqlify/hotel-prices/
 
 #GeoLift
 http://data.geoknow.eu/internal/demo/geolift/FlightEnrichment/flightEnriched.ttl	http://demo.geoknow.eu/y1/geolift/flights/
