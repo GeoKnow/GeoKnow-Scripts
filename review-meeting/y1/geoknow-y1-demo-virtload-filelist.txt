@@ -16,3 +16,5 @@ http://data.geoknow.eu/internal/demo/triplegeo/points_postgis_wiki_athens_GeoSPA
 
 #Auxiliary
 http://data.geoknow.eu/public/geodatagovgr/RDF/blueflags/points_postgis_geodatagovgr_athens_GeoSPARQL_blueflags_points.nt	http://demo.geoknow.eu/y1/triplegeo/geodatagovgr-blueflags/
+http://data.geoknow.eu/public/datagovuk/RDF/scheduled_monuments/points_postgis_datagovuk_london_GeoSPARQL_monuments_polygons.nt http://demo.geoknow.eu/y1/triplegeo/datagovuk-london-monuments/
+http://data.geoknow.eu/public/datagovuk/RDF/parks_gardens/points_postgis_datagovuk_london_GeoSPARQL_parks_polygons.nt http://demo.geoknow.eu/y1/triplegeo/datagovuk-london-parks-gardens/
