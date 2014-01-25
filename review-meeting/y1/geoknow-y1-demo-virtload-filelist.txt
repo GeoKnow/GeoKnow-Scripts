@@ -1,20 +1,22 @@
-#Sparqlify
+# Sparqlify
 http://data.geoknow.eu/internal/demo/sparqlify/2014-01-21-unister-hotel-reviews.sparqlify.sorted.nt.bz2	http://demo.geoknow.eu/y1/sparqlify/hotel-reviews/
-
 http://data.geoknow.eu/internal/demo/sparqlify/2014-01-16-unister-flights-airport-codes.sparqlify.sorted.nt.bz2	http://demo.geoknow.eu/y1/sparqlify/flights/
 
-http://data.geoknow.eu/internal/unister/provided-files/hotel_prices.nt.gz http://demo.geoknow.eu/y1/sparqlify/hotel-prices/
-
-#GeoLift
-http://data.geoknow.eu/internal/demo/geolift/FlightEnrichment/flightEnriched.ttl	http://demo.geoknow.eu/y1/geolift/flights/
-
-#Limes
-http://data.geoknow.eu/internal/demo/limes/UniHReviews_WikiAthGeoHPolResults.ttl	http://demo.geoknow.eu/y1/limes/unister-wikimapia-hotels/
-
-#TripleGeo
+# TripleGeo
 http://data.geoknow.eu/internal/demo/triplegeo/points_postgis_wiki_athens_GeoSPARQL_polygons.nt	http://demo.geoknow.eu/y1/triplegeo/wikimapia-athens/
-
-#Auxiliary
 http://data.geoknow.eu/public/geodatagovgr/RDF/blueflags/points_postgis_geodatagovgr_athens_GeoSPARQL_blueflags_points.nt	http://demo.geoknow.eu/y1/triplegeo/geodatagovgr-blueflags/
 http://data.geoknow.eu/public/datagovuk/RDF/scheduled_monuments/points_postgis_datagovuk_london_GeoSPARQL_monuments_polygons.nt http://demo.geoknow.eu/y1/triplegeo/datagovuk-london-monuments/
 http://data.geoknow.eu/public/datagovuk/RDF/parks_gardens/points_postgis_datagovuk_london_GeoSPARQL_parks_polygons.nt http://demo.geoknow.eu/y1/triplegeo/datagovuk-london-parks-gardens/
+
+# Limes
+http://data.geoknow.eu/internal/demo/limes/hotel_athens/hotels_athens_14rightlinks/Results_1_1_14links.ttl http://demo.geoknow.eu/y1/limes/unister-wikimapia-hotels-athens/
+http://data.geoknow.eu/internal/demo/limes/hotels_london/Results_London_1_1.ttl http://demo.geoknow.eu/y1/limes/unister-wikimapia-hotels-london/
+
+# GeoLift
+http://data.geoknow.eu/internal/demo/geolift/FlightEnrichment/flightEnriched.ttl	http://demo.geoknow.eu/y1/geolift/flights/
+
+# FAGI
+
+
+# Auxiliary
+http://data.geoknow.eu/internal/unister/provided-files/hotel_prices.nt.gz http://demo.geoknow.eu/y1/sparqlify/hotel-prices/
