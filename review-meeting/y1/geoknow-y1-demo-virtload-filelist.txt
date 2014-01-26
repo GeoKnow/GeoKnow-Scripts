@@ -13,7 +13,7 @@ http://data.geoknow.eu/internal/demo/limes/hotel_athens/hotels_athens_14rightlin
 http://data.geoknow.eu/internal/demo/limes/hotels_london/Results_London_1_1.ttl http://demo.geoknow.eu/y1/limes/unister-wikimapia-hotels-london/
 
 # GeoLift
-http://data.geoknow.eu/internal/demo/geolift/FlightEnrichment/flightEnriched.ttl	http://demo.geoknow.eu/y1/geolift/flights/
+http://data.geoknow.eu/internal/demo/geolift/flight_enrichement/flightEnriched.ttl	http://demo.geoknow.eu/y1/geolift/flights/
 
 # FAGI
 
