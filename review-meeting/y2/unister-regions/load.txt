@@ -1,0 +1,6 @@
+LOAD DATA INFILE '/tmp/toload/region.tsv' INTO TABLE Region FIELDS ENCLOSED BY '\t';
+LOAD DATA INFILE '/tmp/toload/regionPerimeter.tsv' INTO TABLE RegionPerimeter FIELDS ENCLOSED BY '\t';
+LOAD DATA INFILE '/tmp/toload/regionHierarchyClosure.tsv' INTO TABLE RegionHierarchyClosure FIELDS ENCLOSED BY '\t';
+LOAD DATA INFILE '/tmp/toload/regionAlternateNames.tsv' INTO TABLE RegionAlternateNames FIELDS ENCLOSED BY '\t';
+
+
